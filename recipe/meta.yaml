@@ -37,6 +37,7 @@ test:
     - pytest
   imports:
     - mapgenerator
+    - mapgenerator.plotting.timeseries
   commands:
     - pip check
 
