@@ -1,5 +1,5 @@
 {% set name = "mapgenerator" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mapgenerator-{{ version }}.tar.gz
-  sha256: 2dbf9b5131df7cb5827706d095e6d408588cd89e059a2a3f31850986229e743d
+  sha256: 882162b50c1b999b569f322f05d3e07b8c2b3a7c4e88c3805304612a46b05c14
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - config
     - configargparse
     - lxml
-    - matplotlib-base <3.6
+    - matplotlib-base
     - netcdf4
     - numpy
     - pandas
@@ -37,6 +37,7 @@ test:
     - pytest
   imports:
     - mapgenerator
+    - mapgenerator.plotting.timeseries
   commands:
     - pip check
 

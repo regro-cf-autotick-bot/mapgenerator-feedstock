@@ -1,11 +1,11 @@
-About mapgenerator
-==================
+About mapgenerator-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mapgenerator-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/MapGenerator
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mapgenerator-feedstock/blob/main/LICENSE.txt)
 
 Summary: Map Generator is a tool that provides easy to use 2D plotting functions for Earth sciences datasets.
 
