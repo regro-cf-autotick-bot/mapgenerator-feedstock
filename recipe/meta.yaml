@@ -24,7 +24,7 @@ requirements:
     - config
     - configargparse
     - lxml
-    - matplotlib-base <3.6
+    - matplotlib-base
     - netcdf4
     - numpy
     - pandas
