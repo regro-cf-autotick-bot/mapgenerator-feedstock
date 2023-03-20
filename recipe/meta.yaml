@@ -1,5 +1,5 @@
 {% set name = "mapgenerator" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mapgenerator-{{ version }}.tar.gz
-  sha256: 882162b50c1b999b569f322f05d3e07b8c2b3a7c4e88c3805304612a46b05c14
+  sha256: 29be3c1be4d5cb64d7a04bb9b921be3991bae8c1e56dbc0422a997495c5adc70
 
 build:
   noarch: python
