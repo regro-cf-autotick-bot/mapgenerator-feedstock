@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mapgenerator-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mapgenerator-{{ version }}.tar.gz
   sha256: 29be3c1be4d5cb64d7a04bb9b921be3991bae8c1e56dbc0422a997495c5adc70
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - cartopy
     - chart-studio
@@ -29,12 +29,13 @@ requirements:
     - numpy
     - pandas
     - plotly
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   imports:
     - mapgenerator
     - mapgenerator.plotting.timeseries
